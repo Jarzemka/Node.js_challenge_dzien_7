@@ -1,3 +1,4 @@
+const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -5,6 +6,8 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use(express.static('./public/przykladAjax/'));
+
+
 
 app.post('/reverse', (req, res) => {
     const text = req.body.text;
